@@ -1,0 +1,40 @@
+{
+  "name": "vulnwatch-cli-starter",
+  "version": "0.1.0",
+  "description": "Scan npm lockfiles for known vulnerabilities using OSV",
+  "type": "module",
+  "bin": {
+    "vulnwatch": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "test": "tsx --test test/*.test.ts",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "commander": "^13.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "osv",
+    "vulnerability",
+    "npm",
+    "cli",
+    "audit"
+  ]
+}
