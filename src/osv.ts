@@ -39,7 +39,7 @@ async function postJson<T>(url: string, body: unknown): Promise<T> {
 
   for (let attempt = 0; attempt < 3; attempt++) {
     const response = await fetch(url, {
-      method: 'POST', headers: { 'content-type': 'application/json', 'user-agent': 'vulnwatch-cli/0.1' },
+      method: 'POST', headers: { 'content-type': 'application/json', 'user-agent': 'allgood-cli/0.1' },
       body: JSON.stringify(body), signal: AbortSignal.timeout(20_000)
     });
 

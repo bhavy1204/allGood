@@ -1,10 +1,10 @@
 {
-  "name": "vulnwatch-cli-starter",
+  "name": "allgood-cli-starter",
   "version": "0.1.0",
   "description": "Scan npm lockfiles for known vulnerabilities using OSV",
   "type": "module",
   "bin": {
-    "vulnwatch": "./dist/cli.js"
+    "allgood": "./dist/cli.js"
   },
   "files": [
     "dist",

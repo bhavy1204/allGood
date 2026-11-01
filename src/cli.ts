@@ -9,9 +9,9 @@ import { queryOsv, fixedVersions, severityLabel, type Finding } from './osv.js';
 
 const program = new Command();
 
-program.name('vulnwatch').description('Scan npm lockfile dependencies against OSV advisories').version('0.1.0');
+program.name('allgood').description('Scan npm lockfile dependencies against OSV advisories').version('0.1.0');
 
-const stateDir = join(homedir(), '.vulnwatch');
+const stateDir = join(homedir(), '.allgood');
 const statePath = join(stateDir, 'state.json');
 
 function positiveInt(value: string): number {
@@ -91,7 +91,7 @@ program.command('doctor').description('Check project prerequisites').option('-p,
 
 
 program.command('help-schedule').description('Print example cron schedule').action(() => {
-  console.log('Every 6 hours (replace paths):\n0 */6 * * * /absolute/path/to/vulnwatch watch --path /absolute/path/to/project >> /absolute/path/to/vulnwatch.log 2>&1');
+  console.log('Every 6 hours (replace paths):\n0 */6 * * * /absolute/path/to/allgood watch --path /absolute/path/to/project >> /absolute/path/to/allgood.log 2>&1');
 });
 
 
